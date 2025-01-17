@@ -671,7 +671,7 @@ void process_csv_standardized_drugnames(const std::string& inputFileName, const 
     std::ofstream outputFile(outputFileName);
 
     if (!inputFile.is_open() || !outputFile.is_open()) {
-        std::cerr << "Error opening files." << std::endl;
+        std::cerr << "Error opening mapping files." << std::endl;
         return;
     }
 
@@ -713,7 +713,7 @@ int main(int argc, char* argv[]){
     std::string output_file;// csv_outputfile
     std::string mapping_path;
     std::vector<patient> clean_patients_list;
-    while((opt = getopt_long(argc, argv, "aps:c:i:o:m:", long_options, nullptr)) != -1){
+    while((opt = getopt_long(argc, argv, "aps:c:i:o:m:v", long_options, nullptr)) != -1){
         switch (opt)
         {
         case 'a':
@@ -760,7 +760,7 @@ int main(int argc, char* argv[]){
     }
 
     int option_count = (all ? 1 : 0) + (!specific_AE.empty() ? 1 : 0) + (!csv_specific_AE.empty() ? 1 : 0);
-    if (option_count > 1) {
+    if (option_count != 1) {
         std::cerr << "Error: Only one of --all, --specific, or --csvspecific can be specified at a time.\n";
         return 1;
     }

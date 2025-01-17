@@ -98,10 +98,10 @@ This script stores the CSV file in a format that can be processed by our algorit
 
 ## References
 
-<a id="1">[1]</a>  
+<a id="1">[1]</a>
 This software is based on pugixml library [http://pugixml.org](http://pugixml.org). pugixml is Copyright (C) 2006-2018 Arseny Kapoulkine.
 
-<a id="2">[2]</a>  
+<a id="2">[2]</a>
 Fusaroli M, Giunchi V. DiAna: Repository for FAERS cleaning and analysis. Published online May 10, 2023. doi:10.17605/OSF.IO/ZQU89
 
 ## Contributions
